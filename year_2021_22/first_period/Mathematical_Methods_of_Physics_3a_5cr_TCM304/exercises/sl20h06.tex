@@ -1,0 +1,139 @@
+
+\documentclass[12pt]{article}
+%\usepackage[finnish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\newcommand{\pat}{\partial}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\abf}{{\bf a}}
+\newcommand{\Zcal}{{\cal Z}_{12}}
+\newcommand{\zcal}{z_{12}}
+\newcommand{\Acal}{{\cal A}}
+\newcommand{\Fcal}{{\cal F}}
+\newcommand{\Ucal}{{\cal U}}
+\newcommand{\Vcal}{{\cal V}}
+\newcommand{\Ocal}{{\cal O}}
+\newcommand{\Rcal}{{\cal R}}
+\newcommand{\Scal}{{\cal S}}
+\newcommand{\Lcal}{{\cal L}}
+\newcommand{\Hcal}{{\cal H}}
+\newcommand{\hsf}{{\sf h}}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\Xbar}{\bar{X}}
+\newcommand{\xibar}{\bar{\xi }}
+\newcommand{\barh}{\bar{h}}
+\newcommand{\Ubar}{\bar{\cal U}}
+\newcommand{\Vbar}{\bar{\cal V}}
+\newcommand{\Fbar}{\bar{F}}
+\newcommand{\zbar}{\bar{z}}
+\newcommand{\wbar}{\bar{w}}
+\newcommand{\zbarhat}{\hat{\bar{z}}}
+\newcommand{\wbarhat}{\hat{\bar{w}}}
+\newcommand{\wbartilde}{\tilde{\bar{w}}}
+\newcommand{\barone}{\bar{1}}
+\newcommand{\bartwo}{\bar{2}}
+\newcommand{\nbyn}{N \times N}
+\newcommand{\repres}{\leftrightarrow}
+\newcommand{\Tr}{{\rm Tr}}
+\newcommand{\tr}{{\rm tr}}
+\newcommand{\ninfty}{N \rightarrow \infty}
+\newcommand{\unitk}{{\bf 1}_k}
+\newcommand{\unitm}{{\bf 1}}
+\newcommand{\zerom}{{\bf 0}}
+\newcommand{\unittwo}{{\bf 1}_2}
+\newcommand{\holo}{{\cal U}}
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+\newcommand{\muhat}{\hat{\mu}}
+\newcommand{\nuhat}{\hat{\nu}}
+\newcommand{\rhat}{\hat{r}}
+\newcommand{\phat}{\hat{\phi}}
+\newcommand{\that}{\hat{t}}
+\newcommand{\shat}{\hat{s}}
+\newcommand{\zhat}{\hat{z}}
+\newcommand{\what}{\hat{w}}
+\newcommand{\sgamma}{\sqrt{\gamma}}
+\newcommand{\bfE}{{\bf E}}
+\newcommand{\bfB}{{\bf B}}
+\newcommand{\bfM}{{\bf M}}
+\newcommand{\cl} {\cal l}
+\newcommand{\ctilde}{\tilde{\chi}}
+\newcommand{\ttilde}{\tilde{t}}
+\newcommand{\ptilde}{\tilde{\phi}}
+\newcommand{\utilde}{\tilde{u}}
+\newcommand{\vtilde}{\tilde{v}}
+\newcommand{\wtilde}{\tilde{w}}
+\newcommand{\ztilde}{\tilde{z}}
+
+
+\hoffset 0.5cm
+\voffset -0.4cm
+\evensidemargin -0.2in
+\oddsidemargin -0.2in
+\topmargin -0.2in
+\textwidth 6.3in
+\textheight 8.4in
+
+\begin{document}
+
+\normalsize
+
+\baselineskip 14pt
+
+\begin{center}
+{\Large {\bf FYMM/MMP IIIa 2020 \ \ \  Problem Set 6}}
+\end{center}
+
+\bigskip
+
+\noindent
+Please submit your solutions for grading by \textbf{Monday 12.10.} in Moodle.
+
+
+\begin{enumerate}
+\item {\bf Mattress flipping.}
+Bed mattress manufacturers recommend rotating a mattress twice a year. Let us consider 
+the mathematics of mattress flipping. In Figure 1 are depicted the three ways of rotating a 
+mattress by 180 degrees ({\em i.e.}, "flipping it") around the three symmetry axis, denoted
+by {\bf R, P, Y}, plus the identity transformation {\bf I} (doing nothing). These operations form a group. 
+(Assume that the mattress has patterns so that you can identify its upperside and underside, front and rear. Hint: you may use a sheet of paper.)
+\begin{description}
+\item [i)] Construct the Cayley (multiplication) table for the 4 operations {\bf I,R,P,Y}. 
+\item [ii)] Can you identify the group of mattress flipping operations?
+\end{description}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.5]{mattress.PNG}
+\caption{Mattress flipping.}
+\end{center}
+\end{figure}
+
+\item Construct the character table of $\mathbb{Z}_2\times \mathbb{Z}_2$.
+
+\item In the Example in the updated lecture notes, it was suggested that the number of conjugacy classes of a permutation group is equal to the number of distinct ``cycle types''.  Prove this statement for 
+the permutation group $S_4$.  How many inequivalent irreducible unitary representations does $S_4$ have?
+
+\item Given a vector space $V$, prove that every $\omega \in (V^*)^*$ can be uniquely associated with a vector $\vec{v}\in V$ such that $\omega (f)= \bra f , \vec{v}\ket$.
+
+\item Let the (1,0)-tensor $R$
+have the components
+$$
+R^1=a \ ; R^2 = a^2 \ ; R^3 = a^4 
+$$
+and the (0,1)-tensor $S$
+have the components
+$$
+S_1=-b \ ; S_2 = c \ ; S_3 =- d \ . 
+$$
+Calculate all the components $T^\mu_\nu$ of the (1,1)-tensor $T=R\otimes S$.
+
+
+\end{enumerate}
+\end{document}

@@ -1,0 +1,237 @@
+
+\documentclass[12pt]{article}
+\usepackage[english,finnish]{babel}
+\usepackage{t1enc}
+
+% AMS packages:
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsxtra}
+% for comments to work
+\usepackage{verbatim}
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Hilbert spaces:
+\newcommand{\hilb}{\mathcal{H}}
+\newcommand{\banH}{\mathcal{B}(\hilb)}
+\newcommand{\fock}{\mathcal{F}}
+
+% Products:
+\newcommand{\scalpr}[2]{( #1, #2 )}
+\newcommand{\dualpr}[2]{\langle #1, #2 \rangle}
+
+% Fonts
+\newcommand{\calc}{\mathcal{C}}
+\newcommand{\cala}{\mathcal{A}}
+\newcommand{\calv}{\mathcal{V}}
+\newcommand{\calf}{\mathcal{F}}
+\newcommand{\cals}{\mathcal{S}}
+\newcommand{\cald}{\mathcal{D}}
+\newcommand{\banach}{\mathcal{B}}
+\newcommand{\id}[1]{\mathbbm{1}\!\left({#1}\right)}
+
+\newcommand{\ci}{{\rm i}}
+\newcommand{\rmd}{{\rm d}}
+\newcommand{\rme}{{\rm e}}
+
+\newcommand{\re}{{\rm Re\,}}
+\newcommand{\im}{{\rm Im\,}}
+
+% misc
+\newcommand{\defem}[1]{{\em #1\/}}
+\newcommand{\vep}{\varepsilon}
+
+
+\newcommand{\qand}{\quad\text{and}\quad}
+
+% To define sets:
+\newcommand{\defset}[2]{ \left\{ #1 \left|\, #2\makebox[0pt]{$\displaystyle\phantom{#1}$}\right.\!\right\} }
+
+\newcounter{alplisti}
+\renewcommand{\thealplisti}{\alph{alplisti}}
+\newenvironment{alplist}[1][(\thealplisti)]{\begin{list}{{\rm #1}\ }{ %
+      \usecounter{alplisti} %
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}  %
+%    \setlength{\leftmargin}{5em} %
+%    \setlength{\labelwidth}{5em} %
+%    \setlength{\labelsep}{1em} %
+%    \settowidth{\labelwidth}{(DR2)}
+     \setlength{\topsep}{0pt} %
+}}{\end{list}}
+
+% Norms:
+\newcommand{\abs}[1] {\lvert #1 \rvert}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+\newcommand{\floor}[1] {\lfloor {#1} \rfloor}
+\newcommand{\ceil}[1]  {\lceil  {#1} \rceil}
+
+% Basic spaces
+\newcommand{\R} {\mathbb{R}}
+\newcommand{\C} {{\mathbb{C}}}
+\newcommand{\Rd} {{\mathbb{R}^{d}}}
+\newcommand{\N} {\mathbb{N}}
+\newcommand{\Z} {\mathbb{Z}}
+\newcommand{\Q} {\mathbb{Q}}
+\newcommand{\K} {\mathbb{K}}
+\newcommand{\T} {\mathbb{T}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\pat}{\partial}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\abf}{{\bf a}}
+\newcommand{\Zcal}{{\cal Z}_{12}}
+\newcommand{\zcal}{z_{12}}
+\newcommand{\Acal}{{\cal A}}
+\newcommand{\Fcal}{{\cal F}}
+\newcommand{\Ucal}{{\cal U}}
+\newcommand{\Vcal}{{\cal V}}
+\newcommand{\Ocal}{{\cal O}}
+\newcommand{\Rcal}{{\cal R}}
+\newcommand{\Scal}{{\cal S}}
+\newcommand{\Lcal}{{\cal L}}
+\newcommand{\Hcal}{{\cal H}}
+\newcommand{\hsf}{{\sf h}}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\Xbar}{\bar{X}}
+\newcommand{\xibar}{\bar{\xi }}
+\newcommand{\barh}{\bar{h}}
+\newcommand{\Ubar}{\bar{\cal U}}
+\newcommand{\Vbar}{\bar{\cal V}}
+\newcommand{\Fbar}{\bar{F}}
+\newcommand{\zbar}{\bar{z}}
+\newcommand{\wbar}{\bar{w}}
+\newcommand{\zbarhat}{\hat{\bar{z}}}
+\newcommand{\wbarhat}{\hat{\bar{w}}}
+\newcommand{\wbartilde}{\tilde{\bar{w}}}
+\newcommand{\barone}{\bar{1}}
+\newcommand{\bartwo}{\bar{2}}
+\newcommand{\nbyn}{N \times N}
+\newcommand{\repres}{\leftrightarrow}
+\newcommand{\Tr}{{\rm Tr}}
+\newcommand{\tr}{{\rm tr}}
+\newcommand{\ninfty}{N \rightarrow \infty}
+\newcommand{\unitk}{{\bf 1}_k}
+\newcommand{\unitm}{{\bf 1}}
+\newcommand{\zerom}{{\bf 0}}
+\newcommand{\unittwo}{{\bf 1}_2}
+\newcommand{\holo}{{\cal U}}
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+\newcommand{\muhat}{\hat{\mu}}
+\newcommand{\nuhat}{\hat{\nu}}
+\newcommand{\rhat}{\hat{r}}
+\newcommand{\phat}{\hat{\phi}}
+\newcommand{\that}{\hat{t}}
+\newcommand{\shat}{\hat{s}}
+\newcommand{\zhat}{\hat{z}}
+\newcommand{\what}{\hat{w}}
+\newcommand{\sgamma}{\sqrt{\gamma}}
+\newcommand{\bfE}{{\bf E}}
+\newcommand{\bfB}{{\bf B}}
+\newcommand{\bfM}{{\bf M}}
+\newcommand{\cl} {\cal l}
+\newcommand{\ctilde}{\tilde{\chi}}
+\newcommand{\ttilde}{\tilde{t}}
+\newcommand{\ptilde}{\tilde{\phi}}
+\newcommand{\utilde}{\tilde{u}}
+\newcommand{\vtilde}{\tilde{v}}
+\newcommand{\wtilde}{\tilde{w}}
+\newcommand{\ztilde}{\tilde{z}}
+
+\selectlanguage{english}
+
+\hoffset 0.5cm
+\voffset -0.4cm
+\evensidemargin -0.2in
+\oddsidemargin -0.2in
+\topmargin -0.2in
+\textwidth 6.3in
+\textheight 8.4in
+
+\begin{document}
+
+\normalsize
+
+\baselineskip 14pt
+
+\begin{center}
+{\Large {\bf FYMM/MMP IIIa 2020 \ \ \  Problem Set 3}}
+\end{center}
+
+\bigskip
+
+\noindent
+Please submit your solutions for grading by \textbf{Monday 21.9.} in Moodle.\\
+The second part of problem four could prove to be more challenging than the rest: you could save it
+last when working on the problems.
+
+
+
+\begin{enumerate}
+\item Consider a subgroup of $2n\times2n$ non-singular real matrices, the symplectic group $Sp(2n,\mathbb{R})$:
+$$
+Sp(2n,\mathbb{R}) =\{ M \in GL(2n,\mathbb{R})| M^T\Omega M = \Omega \} \ ,
+$$
+where $\Omega$ is the $2n\times 2n$ matrix
+$$
+\Omega = \left( \begin{array}{cc} 0_n & I_n \\ -I_n & 0_n \end{array} \right)
+$$
+where $I_n$ denotes the $n\times n$ identity matrix and $0_n$ the $n\times n$ null matrix.  
+\begin{enumerate}
+\item Show that it is a group.
+\item Show that dim $Sp(2n,\mathbb{R})=n(2n+1)$.
+\end{enumerate}
+ \item Let the group $G\equiv \mathbb{Z}\times \mathbb{Z}$ act on $\mathbb{R}^2$ by 
+$$
+   L_{(m,n)}(x,y) = (x+2\pi m, y+2\pi n) \ .
+$$
+What is the quotient space $\mathbb{R}^2/G$?
+\item Recall that the unitary group $U(5)$ leaves the complex scalar product of any pair of vectors of $\C^5$ invariant. Pick two vectors $x,y\in \C^5$. Consider then 
+the subset
+$$
+             A = \{ \alpha x + \beta y |~\forall \alpha, \beta \in \C \} \subset \C^5 \ ,
+$$
+the set of all complex linear combinations of $x$ and $y$. Is there a subgroup $H$ of $U(5)$ that leaves $A$ invariant?
+(More precisely, we ask that for each matrix $M\in H$ we should have $Ma\in A$ for every $a\in A$.) What properties would $H$ have?
+\item In the lectures, it was shown that the SU$(2)$ matrices can be written in the form
+\begin{center}
+$g =\left( \begin{array}{cc} x_0+ix_i & x_2+ix_3  \\ -x_2+ix_3 & x_0-ix_1  
+\end{array}\right)$,
+\end{center}
+where the real parameters $x_i$, $i=0,\ldots,3$ satisfy the constraint $x^2_0+\cdots+x^2_3=1$. Thus the parameters of SU$(2)$ are coordinates of a unit sphere $S^3$. This time, we consider SL$(2,\mathbb{R})$ and its conjugacy classes.
+\begin{enumerate}
+\item Show that SL$(2,\mathbb{R})$ can be parametrized by four real numbers $x_0,\ldots,x_3$ which satisfy a constraint of the form 
+\begin{equation}
+c_0x^2_0+c_3x^3_3+x^2_1+x^2_2=c.
+\end{equation}
+Find $c_0$, $c_1$, $c$.\\[0.3em]
+\defem{Hint:} The equation will describe one of the four so-called unit pseudospheres. In general, $n$-dimensional unit pseudospheres are $n$-dimensional hypersurfaces of constant curvature in $\mathbb{R}^{n+1}$, defined by an equation of type 
+\begin{equation}
+c_0x^2_0+c_nx^2_n+x^2_1+\cdots+x^2_{n-1}=c,
+\end{equation}
+where $c_0$, $c_n$, $c=\pm 1$. There are four possible alternatives:
+\begin{enumerate}
+\item $(c_0,c_n,c)=(-1,-1,-1)$: $n$-dimensional anti-de Sitter space, $AdS_n$
+\item $(c_0,c_n,c)=(-1,1,1)$: $n$-dimensional de Sitter space, $dS_n$
+\item $(c_0,c_n,c)=(-1,1,-1)$: $n$-dimensional hyperbolic space, $H_n$
+\item $(c_0,c_n,c)=(1,1,1)$: $n$-sphere $S^n$.
+\end{enumerate}
+\item Find the conjugacy classes of SL$(2,\mathbb{R})$ and interpret them as 2-dimensional pseudospheres, if possible.\\[0.3em]
+\defem{Hint:} The trace and the eigenvalues of a matrix do not change under conjugation, i.e., they are shared by all elements in the conjugacy class (but they may also be shared with other conjugacy classes). Use diagonalization to classify the different conjugacy classes. There are three different types of conjugacy classes. 
+\end{enumerate}
+\item Given a group $G$, a left $G$-space $X$, and an element $x\in X$, prove that the isotropy group of $x$ is a subgroup of $G$.
+\end{enumerate}
+
+
+\end{document}

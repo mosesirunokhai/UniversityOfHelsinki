@@ -1,0 +1,270 @@
+
+\documentclass[12pt]{article}
+
+
+\usepackage{latexsym}
+\usepackage[english,finnish]{babel}
+\usepackage{bbm}
+\usepackage{mathrsfs}
+\usepackage{ifthen}
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+% AMS packages:
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsxtra}
+% for comments to work
+\usepackage{verbatim}
+
+\newcommand{\pat}{\partial}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\abf}{{\bf a}}
+\newcommand{\Zcal}{{\cal Z}_{12}}
+\newcommand{\zcal}{z_{12}}
+\newcommand{\Acal}{{\cal A}}
+\newcommand{\Fcal}{{\cal F}}
+\newcommand{\Ucal}{{\cal U}}
+\newcommand{\Vcal}{{\cal V}}
+\newcommand{\Ocal}{{\cal O}}
+\newcommand{\Rcal}{{\cal R}}
+\newcommand{\Scal}{{\cal S}}
+\newcommand{\Lcal}{{\cal L}}
+\newcommand{\Hcal}{{\cal H}}
+\newcommand{\hsf}{{\sf h}}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\Xbar}{\bar{X}}
+\newcommand{\xibar}{\bar{\xi }}
+\newcommand{\barh}{\bar{h}}
+\newcommand{\Ubar}{\bar{\cal U}}
+\newcommand{\Vbar}{\bar{\cal V}}
+\newcommand{\Fbar}{\bar{F}}
+\newcommand{\zbar}{\bar{z}}
+\newcommand{\wbar}{\bar{w}}
+\newcommand{\zbarhat}{\hat{\bar{z}}}
+\newcommand{\wbarhat}{\hat{\bar{w}}}
+\newcommand{\wbartilde}{\tilde{\bar{w}}}
+\newcommand{\barone}{\bar{1}}
+\newcommand{\bartwo}{\bar{2}}
+\newcommand{\nbyn}{N \times N}
+\newcommand{\repres}{\leftrightarrow}
+%\newcommand{\Tr}{{\rm Tr}}
+%\newcommand{\tr}{{\rm tr}}
+\newcommand{\ninfty}{N \rightarrow \infty}
+\newcommand{\unitk}{{\bf 1}_k}
+\newcommand{\unitm}{{\bf 1}}
+\newcommand{\zerom}{{\bf 0}}
+\newcommand{\unittwo}{{\bf 1}_2}
+\newcommand{\holo}{{\cal U}}
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+\newcommand{\muhat}{\hat{\mu}}
+\newcommand{\nuhat}{\hat{\nu}}
+\newcommand{\rhat}{\hat{r}}
+\newcommand{\phat}{\hat{\phi}}
+\newcommand{\that}{\hat{t}}
+\newcommand{\shat}{\hat{s}}
+\newcommand{\zhat}{\hat{z}}
+\newcommand{\what}{\hat{w}}
+\newcommand{\sgamma}{\sqrt{\gamma}}
+\newcommand{\bfE}{{\bf E}}
+\newcommand{\bfB}{{\bf B}}
+\newcommand{\bfM}{{\bf M}}
+\newcommand{\cl} {\cal l}
+\newcommand{\ctilde}{\tilde{\chi}}
+\newcommand{\ttilde}{\tilde{t}}
+\newcommand{\ptilde}{\tilde{\phi}}
+\newcommand{\utilde}{\tilde{u}}
+\newcommand{\vtilde}{\tilde{v}}
+\newcommand{\wtilde}{\tilde{w}}
+\newcommand{\ztilde}{\tilde{z}}
+
+% misc
+\newcommand{\vc}[1]{\mathbf{#1}}
+\newcommand{\defem}[1]{{\em #1\/}}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\wto}{\overset{{\rm w}}{\to}}
+\newcommand{\sto}{\overset{{\rm s}}{\to}}
+\DeclareMathOperator{\wlim}{w-lim}
+\DeclareMathOperator{\slim}{s-lim}
+\DeclareMathOperator{\tr}{Tr}
+
+\newcommand{\qand}{\quad\text{and}\quad}
+
+% To define sets:
+\newcommand{\defset}[2]{ \left\{ #1 \left|\, #2\makebox[0pt]{$\displaystyle\phantom{#1}$}\right.\!\right\} }
+
+\newcounter{alplisti}
+\renewcommand{\thealplisti}{\alph{alplisti}}
+\newenvironment{alplist}[1][(\thealplisti)]{\begin{list}{{\rm #1}\ }{ %
+      \usecounter{alplisti} %
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}  %
+%    \setlength{\leftmargin}{5em} %
+%    \setlength{\labelwidth}{5em} %
+%    \setlength{\labelsep}{1em} %
+%    \settowidth{\labelwidth}{(DR2)}
+     \setlength{\topsep}{0pt} %
+}}{\end{list}}
+
+% Norms:
+\newcommand{\abs}[1] {\lvert #1 \rvert}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+\newcommand{\floor}[1] {\lfloor {#1} \rfloor}
+\newcommand{\ceil}[1]  {\lceil  {#1} \rceil}
+
+% Basic spaces
+\newcommand{\R} {\mathbb{R}}
+\newcommand{\C} {{\mathbb{C}}}
+\newcommand{\Rd} {{\mathbb{R}^{d}}}
+\newcommand{\N} {\mathbb{N}}
+\newcommand{\Z} {\mathbb{Z}}
+\newcommand{\Q} {\mathbb{Q}}
+\newcommand{\K} {\mathbb{K}}
+\newcommand{\T} {\mathbb{T}}
+
+
+\hoffset 0.5cm
+\voffset -0.4cm
+\evensidemargin -0.2in
+\oddsidemargin -0.2in
+\topmargin -0.2in
+\textwidth 6.3in
+\textheight 8.4in
+
+\begin{document}
+
+\normalsize
+
+\baselineskip 14pt
+
+\begin{center}
+{\Large {\bf FYMM/MMP IIIa \ \ \ \ \ \ \ Course Project \ \  Oct 26 2020}}
+\end{center}
+
+\bigskip
+
+Please remember to include your {\it name and student id number\/} on the first sheet of every file you 
+submit.  You are allowed to use notes and other references but {\it do not to discuss or write answers with other people}; exception: you are welcome to discuss and clarify the questions during the exercise session on Thu Oct 15.
+
+Please answer all of the questions below and return them in Moodle, as usual. Each problem will be graded, with the maximal points from each item shown below.  \defem{Note that to give an answer is not enough for maximal points: you need to include also the steps you have used to obtain the answer.}
+You can use calculators and other programmes to help out with numerics.  If you use symbolic calculus or programming, such as Mathematica, you still need to explain how you could complete the steps on your own.
+
+\enlargethispage*{2cm}
+\pagestyle{empty}
+
+\subsubsection*{1. Finite groups and their representations (12 points)}
+
+\begin{alplist}
+ \item Using the cycle shorthand notation of lecture notes 
+ consider the following elements of the symmetric group $S_4$,
+ \[
+  g = (12)(34)\,, \qquad h = (142)\,.
+ \]
+ \begin{enumerate}
+  \item Give explicitly the permutations, as maps from $\{1,2,3,4\}$ to itself, corresponding to $g$ and $h$. \quad (\defem{2 points})
+  \item 
+ Write down, using the above cycle notation, the elements $h^{-1}$ and $g h g^{-1}$
+ obtained from these via group multiplication in $S_4$. \quad (\defem{2 points})
+ \end{enumerate}
+ \item Recall Problem sheet 6 and derive the character table of $S_4$.  \quad (\defem{4 points})
+ \item A wave function of $4$ particles (ignoring spin and moving in the usual $3$-dimensional space) is a function 
+ $\psi(x)=\psi(\vec{x}_1,\vec{x}_2,\vec{x}_3,\vec{x}_4)$.  If $\sigma\in S_4$ is a permutation,
+ the wave function $\psi_\sigma$ corresponding to a configuration where the particle labels 
+ have been permuted by $\sigma$ is then given by 
+ \[
+\psi_\sigma(x) = \psi(M_\sigma x)= \psi(\vec{x}_{\sigma^{-1}(1)},\vec{x}_{\sigma^{-1}(2)},\vec{x}_{\sigma^{-1}(3)},\vec{x}_{\sigma^{-1}(4)})
+ \]
+ (we think here that $\sigma$ permutes particle $1$ to particle $\sigma(1)$, hence the inverse above).  As in the lectures, to each $\sigma$
+ we can then identify $4\times 4$ real matrix $P_\sigma$ such that $M_\sigma=P_\sigma \otimes \mathbbm{1}_3$ where $\mathbbm{1}_3$ denotes the identity map of $\R^3$.
+ \begin{enumerate}
+  \item 
+ Show that the map $\sigma \mapsto P_\sigma$ is a representation 
+ of $S_4$.  \ (\defem{1 point})
+ \item
+ Perform the decomposition of the representation into irreducible unitary representations.
+  \quad (\defem{2 points})
+ \item Suppose particles $1$ and $2$ are identical bosons, as are particles $3$ and $4$, but of a different species.  Then the wave function $\psi$ must be symmetric under permutations which swap the labels of identical particles.   Motivated by this, suppose $D$ is some representation of $S_4$ which respects the symmetry, i.e., such that 
+ $D(\sigma) T=T D(\sigma)$ for all $\sigma\in S_4$ where $T=D(g)$ for the element $g$ defined in item (a).  Just based on this information, is it possible to say something about
+ the transformation $D(g')$, when
+  \[
+ g'= \begin{pmatrix}
+   1 & 2 & 3 & 4 \\ 4 & 3 & 2 & 1
+  \end{pmatrix} \ \ \, ? \qquad \text{(\defem{1 point})}
+ \]
+ \end{enumerate}
+\end{alplist}
+
+\newpage
+ 
+\subsubsection*{2. Conjugacy classes and quotient spaces (12 points)}
+
+\begin{alplist}
+\item Let $C$ be an arbitrary conjugacy class of a finite group $G$. Show that all elements of $C$
+have the same order.  \quad (\defem{3 points})
+\item Consider the set of rational numbers $\mathbb{Q}$ with addition as the multiplication law. Do 
+the elements $2/3$, $4/9$, $8/27$  belong to the same conjugacy class?
+Why? \quad (\defem{3 points})
+\item Construct an action of $(\R,+)$ on $S^1$ and use it to prove that $\mathbb{R}/\mathbb{Z} = S^1$.  In particular, explain carefully the meaning of the left hand side of the formula as well as the meaning of ``$=$'' here. \quad (\defem{3 points})
+\item Show that $\mathbb{CP}^n=U(n+1)/(U(1)\times U(n))$, where 
+$\mathbb{CP}^n = \{ \text{lines in }\C^{n+1}\}$. More precisely, we first define an equivalence relation between
+complex vectors $\vec{z},\vec{w}\in \C^{n+1}$,
+$$
+  \vec{z} = (z_1,\ldots ,z_{n+1}) \sim \vec{w} = (w_1,\ldots
+  ,w_{n+1})
+$$
+if there exists $\lambda \in \C\backslash \{0\}$ such that
+$$
+   \vec{z} = \lambda \vec{w} \ .
+$$
+$\mathbb{CP}^n$ is then given by the following collection of equivalence classes,
+$$
+   \mathbb{CP}^{n} = \{ \ [\vec{ z}]_{\sim}\  |\  \vec{z} \in \C^{n+1},\ \vec{z}
+   \neq 0 \} \ .
+$$
+($\mathbb{CP}^n$ is called the complex projective space.) \quad (\defem{3 points})
+\end{alplist}
+
+\newpage
+
+\subsubsection*{3. Manifolds (6 points)}
+
+\begin{alplist}
+ \item Show that the open interval $U=(0,1)$ is a manifold and that the closed
+ interval $I=[0,1]$ is a manifold with boundary. 
+  \quad (\defem{2 points})
+ \item Consider the unit circle $S^1=\defset{(\cos \varphi,\sin\varphi)}{\varphi\in \R}\subset \
+ \R^2$ which was shown to be a manifold during the lectures.
+ Define $M=S^1\times I$ and show that this is a manifold with boundary. 
+ $M$ is obviously homeomorphic with a ``tube'', considered to be a subset of $\R^3$: explain what this means (no need to prove the homeomorphism).
+ What is the dimension of the manifold $M$?\quad (\defem{2 points})
+ \item Compute the manifold boundary $\partial M$. 
+ Is it compact and/or connected?\quad (\defem{2 points})
+\end{alplist}
+
+\medskip 
+
+All topological spaces appearing above are metric, and thus they are also Hausdorff and paracompact.  You do not need to comment on this in your answers.  Instead, you need to construct the homeomorphisms which prove that the spaces have appropriate manifold structure.
+You do not need to prove continuity in detail but points will be reduced if the map you propose is not a homeomorphism.  Remember to give domain and target (codomain) sets  for your maps!
+
+
+\medskip 
+
+If you wish to check the continuity in more mathematical detail, you can use the results stated below and known continuity properties of basic functions such as cosine and sine (you do not need to prove these; the proofs are done in the mathematics courses Topology I and II): Assume $X$, $Y_1$ and $Y_2$ are some topological spaces:
+\begin{enumerate}
+ \item If $f_1:X\to Y_1$ and $f_2:X \to Y_2$
+ are both continuous, then the map $f(x) = (f_1(x),f_2(x))$ is continuous as a map $X\to Y_1\times Y_2$.
+ \item Suppose $f:X\to Y$ is continuous and $A\subset X$.  Denote $B=f(A)=\defset{f(x)}{x\in A}$.
+ Then the restriction $g(x)=f(x)$, $x\in A$, is continuous as a map $A\to B$ using relative topologies in $A$ and $B$.
+ \item If $X$ is compact and $f:X\to Y$ is continuous, then $f(X)$ is compact (in the relative topology inherited from $Y$).
+ \item If $X$ is connected and $f:X\to Y$ is continuous, then $f(X)$ is connected (in the relative topology inherited from $Y$).
+\end{enumerate}
+
+\end{document}
+

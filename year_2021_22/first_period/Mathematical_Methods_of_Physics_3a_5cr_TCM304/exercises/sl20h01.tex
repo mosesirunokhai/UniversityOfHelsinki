@@ -1,0 +1,219 @@
+
+\documentclass[12pt]{article}
+\usepackage[english,finnish]{babel}
+\usepackage{t1enc}
+
+% AMS packages:
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsxtra}
+% for comments to work
+\usepackage{verbatim}
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Hilbert spaces:
+\newcommand{\hilb}{\mathcal{H}}
+\newcommand{\banH}{\mathcal{B}(\hilb)}
+\newcommand{\fock}{\mathcal{F}}
+
+% Products:
+\newcommand{\scalpr}[2]{( #1, #2 )}
+\newcommand{\dualpr}[2]{\langle #1, #2 \rangle}
+
+% Fonts
+\newcommand{\calc}{\mathcal{C}}
+\newcommand{\cala}{\mathcal{A}}
+\newcommand{\calv}{\mathcal{V}}
+\newcommand{\calf}{\mathcal{F}}
+\newcommand{\cals}{\mathcal{S}}
+\newcommand{\cald}{\mathcal{D}}
+\newcommand{\banach}{\mathcal{B}}
+\newcommand{\id}[1]{\mathbbm{1}\!\left({#1}\right)}
+
+\newcommand{\ci}{{\rm i}}
+\newcommand{\rmd}{{\rm d}}
+\newcommand{\rme}{{\rm e}}
+
+\newcommand{\re}{{\rm Re\,}}
+\newcommand{\im}{{\rm Im\,}}
+
+% misc
+\newcommand{\defem}[1]{{\em #1\/}}
+\newcommand{\vep}{\varepsilon}
+
+
+\newcommand{\qand}{\quad\text{and}\quad}
+
+% To define sets:
+\newcommand{\defset}[2]{ \left\{ #1 \left|\, #2\makebox[0pt]{$\displaystyle\phantom{#1}$}\right.\!\right\} }
+
+\newcounter{alplisti}
+\renewcommand{\thealplisti}{\alph{alplisti}}
+\newenvironment{alplist}[1][(\thealplisti)]{\begin{list}{{\rm #1}\ }{ %
+      \usecounter{alplisti} %
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}  %
+%    \setlength{\leftmargin}{5em} %
+%    \setlength{\labelwidth}{5em} %
+%    \setlength{\labelsep}{1em} %
+%    \settowidth{\labelwidth}{(DR2)}
+     \setlength{\topsep}{0pt} %
+}}{\end{list}}
+
+% Norms:
+\newcommand{\abs}[1] {\lvert #1 \rvert}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+\newcommand{\floor}[1] {\lfloor {#1} \rfloor}
+\newcommand{\ceil}[1]  {\lceil  {#1} \rceil}
+
+% Basic spaces
+\newcommand{\R} {\mathbb{R}}
+\newcommand{\C} {{\mathbb{C}}}
+\newcommand{\Rd} {{\mathbb{R}^{d}}}
+\newcommand{\N} {\mathbb{N}}
+\newcommand{\Z} {\mathbb{Z}}
+\newcommand{\Q} {\mathbb{Q}}
+\newcommand{\K} {\mathbb{K}}
+\newcommand{\T} {\mathbb{T}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\pat}{\partial}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\abf}{{\bf a}}
+\newcommand{\Zcal}{{\cal Z}_{12}}
+\newcommand{\zcal}{z_{12}}
+\newcommand{\Acal}{{\cal A}}
+\newcommand{\Fcal}{{\cal F}}
+\newcommand{\Ucal}{{\cal U}}
+\newcommand{\Vcal}{{\cal V}}
+\newcommand{\Ocal}{{\cal O}}
+\newcommand{\Rcal}{{\cal R}}
+\newcommand{\Scal}{{\cal S}}
+\newcommand{\Lcal}{{\cal L}}
+\newcommand{\Hcal}{{\cal H}}
+\newcommand{\hsf}{{\sf h}}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\Xbar}{\bar{X}}
+\newcommand{\xibar}{\bar{\xi }}
+\newcommand{\barh}{\bar{h}}
+\newcommand{\Ubar}{\bar{\cal U}}
+\newcommand{\Vbar}{\bar{\cal V}}
+\newcommand{\Fbar}{\bar{F}}
+\newcommand{\zbar}{\bar{z}}
+\newcommand{\wbar}{\bar{w}}
+\newcommand{\zbarhat}{\hat{\bar{z}}}
+\newcommand{\wbarhat}{\hat{\bar{w}}}
+\newcommand{\wbartilde}{\tilde{\bar{w}}}
+\newcommand{\barone}{\bar{1}}
+\newcommand{\bartwo}{\bar{2}}
+\newcommand{\nbyn}{N \times N}
+\newcommand{\repres}{\leftrightarrow}
+\newcommand{\Tr}{{\rm Tr}}
+\newcommand{\tr}{{\rm tr}}
+\newcommand{\ninfty}{N \rightarrow \infty}
+\newcommand{\unitk}{{\bf 1}_k}
+\newcommand{\unitm}{{\bf 1}}
+\newcommand{\zerom}{{\bf 0}}
+\newcommand{\unittwo}{{\bf 1}_2}
+\newcommand{\holo}{{\cal U}}
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+\newcommand{\muhat}{\hat{\mu}}
+\newcommand{\nuhat}{\hat{\nu}}
+\newcommand{\rhat}{\hat{r}}
+\newcommand{\phat}{\hat{\phi}}
+\newcommand{\that}{\hat{t}}
+\newcommand{\shat}{\hat{s}}
+\newcommand{\zhat}{\hat{z}}
+\newcommand{\what}{\hat{w}}
+\newcommand{\sgamma}{\sqrt{\gamma}}
+\newcommand{\bfE}{{\bf E}}
+\newcommand{\bfB}{{\bf B}}
+\newcommand{\bfM}{{\bf M}}
+\newcommand{\cl} {\cal l}
+\newcommand{\ctilde}{\tilde{\chi}}
+\newcommand{\ttilde}{\tilde{t}}
+\newcommand{\ptilde}{\tilde{\phi}}
+\newcommand{\utilde}{\tilde{u}}
+\newcommand{\vtilde}{\tilde{v}}
+\newcommand{\wtilde}{\tilde{w}}
+\newcommand{\ztilde}{\tilde{z}}
+
+\selectlanguage{english}
+
+\hoffset 0.5cm
+\voffset -0.4cm
+\evensidemargin -0.2in
+\oddsidemargin -0.2in
+\topmargin -0.2in
+\textwidth 6.3in
+\textheight 8.4in
+
+\begin{document}
+
+\normalsize
+
+\baselineskip 14pt
+
+\begin{center}
+{\Large {\bf FYMM/MMP III \ \ \  Problem Set 1}}
+\end{center}
+
+\noindent
+Please submit your solutions for grading by Monday 7.9.\ in Moodle (there is a link where you can do this after the exercise sheet).
+
+\begin{enumerate}
+\item Consider the following constructions; check each one whether it is a semigroup, monoid, group or
+none of them. Why?
+\begin{itemize}
+\item The set of real numbers $\R$, with raising to power as multiplication:
+$x\cdot y \equiv x^y$, $x,y\in \R$.
+\item The set of positive natural numbers $\N_+=\{1,2,3,\ldots \}$ with the greatest common
+divisor of $m,n\in \N_+$ as their product: $m\cdot n \equiv \text{gcd}(m,n)$.
+\item The set of nonzero rational numbers $\Q\setminus\{0\}$, with the usual product
+as multiplication: $(m/n) \cdot (p/q)
+= (mp/nq)$.
+\end{itemize}
+\item Show that $|S_N|=N!$.
+\item Consider the group $G=\{e,x_1,x_2,x_3,x_4,x_5\}$, where
+\begin{eqnarray*}
+e=\left( \begin{array}{ccc} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1
+\end{array}\right) \ ; \
+x_1 = \left( \begin{array}{ccc} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1
+\end{array}\right) \\
+x_2 = \left( \begin{array}{ccc} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0
+\end{array}\right) \ ; \
+x_3 = \left( \begin{array}{ccc} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0
+\end{array}\right) \\
+x_4 = \left( \begin{array}{ccc} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0
+\end{array}\right) \ ; \
+x_5 = \left( \begin{array}{ccc} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0
+\end{array}\right) \ ,
+\end{eqnarray*}
+and the law of composition is the matrix multiplication.
+Show that $G$ is isomorphic to a known group, give an explicit
+construction of the isomorphism.
+\item An equilateral triangle is symmetric under reflections, with
+the line passing through the center and one of the vertices as the
+reflection axis; and symmetric under 120 degree counterclockwise rotations
+(with the center as the fixed point). Let $e$ be the identity
+map (do nothing), $a$ a rotation by 120 degrees, and $b$ the above
+mentioned reflection. Consider the group generated by
+$e,a$ ja $b$ with composition of symmetry operations as the multiplication
+rule.
+What is the order of the group? (Hint: greater than three.)
+Construct the multiplication table (Cayley table) of the group.
+\end{enumerate}
+
+
+\end{document}

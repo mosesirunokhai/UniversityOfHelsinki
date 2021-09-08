@@ -5,6 +5,11 @@ name = "pypi"
 
 [packages]
 send2trash = "*"
+numpy = "*"
+matplotlib = "*"
+notebook = "*"
+scipy = "*"
+pandas = "*"
 
 [dev-packages]
 
